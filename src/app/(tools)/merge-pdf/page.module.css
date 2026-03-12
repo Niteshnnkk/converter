@@ -1,0 +1,121 @@
+.workspace {
+    padding: var(--space-10) var(--space-6) var(--space-20);
+    min-height: 50vh;
+}
+
+.actionBar {
+    max-width: 600px;
+    margin: var(--space-6) auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fileCount {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.hint {
+    text-align: center;
+    margin-top: var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+}
+
+.optionGroup {
+    max-width: 600px;
+    margin: var(--space-6) auto 0;
+    padding: var(--space-6);
+    background: var(--bg-alt);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-light);
+}
+
+.optionTitle {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: var(--space-4);
+}
+
+.optionRow {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.optionCard {
+    flex: 1;
+    min-width: 140px;
+    padding: var(--space-4);
+    background: var(--bg-main);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.optionCard:hover {
+    border-color: var(--primary);
+}
+
+.optionCard.active {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.optionCard h4 {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    margin-bottom: var(--space-1);
+}
+
+.optionCard p {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.inputGroup {
+    max-width: 600px;
+    margin: var(--space-6) auto 0;
+}
+
+.inputLabel {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--text-heading);
+    margin-bottom: var(--space-2);
+}
+
+.textInput {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    color: var(--text-heading);
+    background: var(--bg-main);
+    transition: border-color var(--transition-fast);
+}
+
+.textInput:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 119, 194, 0.1);
+}
+
+@media (max-width: 640px) {
+    .actionBar {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .optionRow {
+        flex-direction: column;
+    }
+}

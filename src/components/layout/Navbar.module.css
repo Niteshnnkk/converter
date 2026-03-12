@@ -1,0 +1,323 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-sticky);
+    padding: var(--space-4) 0;
+    transition: all var(--transition-base);
+    background: transparent;
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+    padding: var(--space-3) 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+    color: var(--text-heading);
+}
+
+.logoIcon {
+    width: 36px;
+    height: 36px;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.logoText {
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    color: var(--text-heading);
+}
+
+.logoPdf {
+    color: var(--primary);
+}
+
+/* Desktop Nav */
+.desktopNav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.navItem {
+    position: relative;
+}
+
+.navBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-body);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navBtn:hover {
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.navLink {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-body);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.navLink:hover {
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+/* Mega Menu */
+.megaMenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: var(--space-2);
+    animation: slideDown 0.2s ease;
+    z-index: var(--z-dropdown);
+}
+
+.megaMenuInner {
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-6);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    min-width: 720px;
+}
+
+.megaCol {
+    min-width: 0;
+}
+
+.megaColTitle {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.megaList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.megaLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    color: var(--text-body);
+}
+
+.megaLink:hover {
+    background: var(--bg-alt);
+    color: var(--text-heading);
+}
+
+.megaIcon {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.megaName {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+/* Right Side */
+.rightSide {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.loginBtn {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-body);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    transition: color var(--transition-fast);
+}
+
+.loginBtn:hover {
+    color: var(--primary);
+}
+
+.signupBtn {
+    font-size: var(--font-size-sm) !important;
+    padding: var(--space-2) var(--space-5) !important;
+}
+
+/* Mobile Toggle */
+.mobileToggle {
+    display: none;
+    padding: var(--space-2);
+    color: var(--text-heading);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile Nav */
+.mobileNav {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-main);
+    z-index: var(--z-overlay);
+    overflow-y: auto;
+    animation: slideDown 0.3s ease;
+}
+
+.mobileNavInner {
+    padding: var(--space-4);
+}
+
+.mobileSection {
+    margin-bottom: var(--space-4);
+}
+
+.mobileSectionTitle {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: var(--space-4);
+}
+
+.mobileCategory {
+    margin-bottom: var(--space-4);
+}
+
+.mobileCatTitle {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-2);
+}
+
+.mobileLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-2);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-body);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+}
+
+.mobileLink:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+}
+
+.mobileDivider {
+    height: 1px;
+    background: var(--border);
+    margin: var(--space-4) 0;
+}
+
+.mobileSignup {
+    width: 100%;
+    margin-top: var(--space-3);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .loginBtn,
+    .signupBtn {
+        display: none;
+    }
+
+    .mobileToggle {
+        display: flex;
+    }
+
+    .mobileNav {
+        display: block;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.megaMenu {
+    animation: slideDown 0.2s ease;
+}

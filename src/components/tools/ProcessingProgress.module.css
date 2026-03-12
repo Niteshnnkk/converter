@@ -1,0 +1,75 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-modal);
+    animation: fadeIn 0.3s ease;
+}
+
+.card {
+    background: var(--bg-main);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-10) var(--space-12);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    min-width: 320px;
+}
+
+.spinner {
+    color: var(--primary);
+    margin-bottom: var(--space-4);
+    animation: spin 1s linear infinite;
+    display: inline-flex;
+}
+
+.label {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: var(--space-5);
+}
+
+.progressBar {
+    height: 6px;
+    background: var(--border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--space-2);
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-full);
+    transition: width 0.3s ease;
+}
+
+.percentage {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
