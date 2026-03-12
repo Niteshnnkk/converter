@@ -5,7 +5,7 @@ export default function Page() {
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>Mobile App</h1>
-          <p className={styles.desc}>Get iLovePDF on iOS and Android</p>
+          <p className={styles.desc}>Get Pdfwithmagic on iOS and Android</p>
         </div>
       </section>
       <section className={styles.content}>

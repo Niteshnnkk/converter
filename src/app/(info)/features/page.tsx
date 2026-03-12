@@ -5,7 +5,7 @@ export default function Page() {
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>Features</h1>
-          <p className={styles.desc}>Explore all the powerful features of iLovePDF</p>
+          <p className={styles.desc}>Explore all the powerful features of Pdfwithmagic</p>
         </div>
       </section>
       <section className={styles.content}>

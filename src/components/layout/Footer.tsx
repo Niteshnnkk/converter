@@ -50,7 +50,7 @@ export default function Footer() {
                                     <Zap size={18} />
                                 </div>
                                 <span className={styles.logoText}>
-                                    iLove<span className={styles.logoPdf}>PDF</span>
+                                    Pdfwith<span className={styles.logoPdf}>magic</span>
                                 </span>
                             </Link>
                             <p className={styles.brandDesc}>
@@ -144,7 +144,7 @@ export default function Footer() {
                 <div className={styles.container}>
                     <div className={styles.bottomInner}>
                         <p className={styles.copyright}>
-                            © {new Date().getFullYear()} iLovePDF. All rights reserved.
+                            © {new Date().getFullYear()} Pdfwithmagic. All rights reserved.
                         </p>
                         <div className={styles.legalLinks}>
                             {legalLinks.map((link) => (

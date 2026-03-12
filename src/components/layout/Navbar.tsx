@@ -47,7 +47,7 @@ export default function Navbar() {
                         <Zap size={20} />
                     </div>
                     <span className={styles.logoText}>
-                        iLove<span className={styles.logoPdf}>PDF</span>
+                        Pdfwith<span className={styles.logoPdf}>magic</span>
                     </span>
                 </Link>
 

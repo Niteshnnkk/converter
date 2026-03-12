@@ -5,7 +5,7 @@ export default function Page() {
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>Desktop App</h1>
-          <p className={styles.desc}>Download iLovePDF for Windows and Mac</p>
+          <p className={styles.desc}>Download Pdfwithmagic for Windows and Mac</p>
         </div>
       </section>
       <section className={styles.content}>

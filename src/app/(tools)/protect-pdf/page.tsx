@@ -32,7 +32,7 @@ export default function ProtectPdfPage() {
             // pdf-lib doesn't natively support encryption, so we re-save with metadata
             // In a production app, you'd use a server-side library for proper encryption
             pdf.setTitle('Protected Document');
-            pdf.setProducer('iLovePDF Clone');
+            pdf.setProducer('Pdfwithmagic');
             const bytes = await pdf.save();
             const blob = new Blob([bytes as unknown as BlobPart], { type: 'application/pdf' });
             setResultBlob(blob);
